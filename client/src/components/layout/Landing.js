@@ -14,8 +14,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className="landing-inner">
           <h1 className="x-large">Google Events App</h1>
           <p className="lead">
-            Create a developer profile/portfolio, share posts and get help from
-            other developers
+          Get events from google calender api,by sigingung into google through oauth2 client and display fetch events in a calender view.
           </p>
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">
