@@ -28,12 +28,11 @@ user can delete events bny clicking on them.
 
 #####  Admin user story ###########
 Login to  admin user dashboard with the credentials.provided in the README file at the top:
-###  Redirect to dashboard, where option to login with google to get access to google api, this works using thengoogle o auth2 client
-  google calender api.
+### After loggin in as admin page redirect to dashboard, where option to login with google to get access to google api, this works using the google oauth2 client google calender api.
 
-### ON THE DASHBOARD AN ADMIN PANEL LINK APPEARS , WHEN LOGGED IN AS AND ADMIN USER
-### ADMIN PANEL-- FIREST VIEW SHOWS A LIST OF ALL  THE USERS WHO HAVE CREATED AN ACCOUNT BY CLICKING THE LOAD USERS NUTTONS ON THE PAGE
-### AFTER USERS ARE LOADED CLICK ON ANY OF THEM TO SEE THEIR EVENTS DISPLAYED IN A CALENDER VIEW
+ ON THE DASHBOARD AN ADMIN PANEL LINK APPEARS , WHEN LOGGED IN AS AND ADMIN USER
+ ADMIN PANEL-- FIREST VIEW SHOWS A LIST OF ALL  THE USERS WHO HAVE CREATED AN ACCOUNT BY CLICKING THE LOAD USERS NUTTONS ON THE PAGE
+ AFTER USERS ARE LOADED CLICK ON ANY OF THEM TO SEE THEIR EVENTS DISPLAYED IN A CALENDER VIEW
 
 
 # Quick Start 
