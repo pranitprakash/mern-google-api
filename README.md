@@ -11,11 +11,10 @@
 #### TO USE THE APP AS ADMIN USER USE THE BELOW CREDENTIALS AND USERNAME AND AND PASSWORD, SO THAT YOU CAN ACCESS  ### THE ADMIN PANEL
 
 
-#############################################
-ADMIN USERNAME: admin@techvariable.com
-ADMIN PASSWORD :  12345678
+##  ADMIN USERNAME: admin@techvariable.com
+## ADMIN PASSWORD :  12345678
 
-#############################################
+
 ######   Features of this app:  ########
 #####  Normal user story ###########
 Create an user account:
