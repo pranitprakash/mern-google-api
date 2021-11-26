@@ -19,13 +19,18 @@ import Container from '@mui/material/Container';
 const Calender = ({ setAlert, loadEvents, events }) => {
  
   const [clickedDateEvents,setClickedDateEvents] = React.useState([]);
-  const [modalVisibility, setmodalVisbility] = React.useState("none");
+  const [modalVisibility, setmodalVisbility] = React.useState("hidden");
   const [modalCloseVisibilty, setModalCloseVisibilty ]= React.useState("hidden");
+ 
+
+
+
   
 
   const hideEvents = () => {
     setmodalVisbility('hidden')
     setModalCloseVisibilty('hidden')
+
   }
 
 
@@ -78,7 +83,7 @@ const modalCloseStyle = {
     console.log(newArray);
     setClickedDateEvents(newArray);
     console.log(clickedDateEvents);
-    setmodalVisbility('block');
+    setmodalVisbility('visible');
     setModalCloseVisibilty('visible')
 
   

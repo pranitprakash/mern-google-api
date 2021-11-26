@@ -161,7 +161,7 @@ router.get('/getMyEvents',auth,(req,res)=>{
 
 //get all user 
 
-router.get('/getAllUsers',(req,res)=>{
+router.get('/getAllUsers',auth,(req,res)=>{
   try {
 
 

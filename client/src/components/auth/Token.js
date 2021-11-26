@@ -36,7 +36,7 @@ const Token = ({ setAlert, loadEvents, events }) => {
       }
     };
     handleClick(code);
-  });
+  },[]);
 
   return (
     <Container maxWidth="xl">

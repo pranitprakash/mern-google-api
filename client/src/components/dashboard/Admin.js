@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import { Navigate } from "react-router";
+
 import Button from "@mui/material/Button";
-import Alert from "@mui/material/Alert"
+
 import { styled } from "@mui/system";
 import { loadAllUsers} from '../../actions/events';
 import { connect } from 'react-redux';
@@ -50,7 +50,7 @@ export const Admin = ({setAlert,loadAllUsers,users}) => {
           </Button>
 
          {users.map((user)=>{
-           return <LinkContainer><Link to={`/getUserEvents/${user._id}`} > {user.name }  </Link></LinkContainer>
+           return <LinkContainer key={user.id}   ><Link  key={user.id}   to={`/getUserEvents/${user._id}`} > {user.name }  </Link></LinkContainer>
            
            
        

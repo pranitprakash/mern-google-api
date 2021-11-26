@@ -16,34 +16,109 @@ import Container from '@mui/material/Container';
 
 
 const UserEvents = ({ singleUserEvents }) => {
+  
+  const [clickedDateEvents,setClickedDateEvents] = React.useState([]);
+  const [modalVisibility, setmodalVisbility] = React.useState("hidden");
+  const [modalCloseVisibilty, setModalCloseVisibilty ]= React.useState("hidden");
+ 
+
+
+
+  
+
+  const hideEvents = () => {
+    setmodalVisbility('hidden')
+    setModalCloseVisibilty('hidden')
+
+  }
+
+
+const modalStyle ={
+  color:'blueGrey',
+  backgroundColor:'#c6e2ff',
+  height : 'fit-content',
+  blockSize: 'fit-content',
+  padding: '50px',
+  width : '1000px',
+  zIndex:100,
+  visibility : modalVisibility,
+  display:'flex',
+  flexDirection : 'column',
+  justifyContent:'center',
+
+};
+
+const modalCloseStyle = {
+  visibility : modalCloseVisibilty,
+}
+
+
+
+
   const calendarRef = React.createRef();
   const googleEvents = (start, summary) => {
     let calenderApi = calendarRef.current.getApi();
     calenderApi.addEvent({
-      // this object will be "parsed" into an Event Object
+     
       id: createEventId(),
-      title: summary, // a property!
-      start: start // a property!
-      // a property! ** see important note below about 'end' **
+      title: summary, 
+      start: start 
+    
     });
   };
 
+  const handleDateClick = (selectInfo) => {
+ 
+    let calendarApi = selectInfo.view.calendar;
+    
+    var newArray = singleUserEvents.filter(function (el)
+    {   const  newDateAndTime = el.start.split("T");
+     const newDate = newDateAndTime[0];
+    
+      return newDate=== selectInfo.dateStr ;
+            
+    });
+
+    console.log(newArray);
+    setClickedDateEvents(newArray);
+    console.log(clickedDateEvents);
+    setmodalVisbility('visible');
+    setModalCloseVisibilty('visible')
+
+  
+  
+    calendarApi.unselect(); //
+  };
+
+
+
   return (
     <Container maxWidth="xl">
+    <button style={modalCloseStyle} className="modalClose" onClick={hideEvents}>X</button>
+    <div   style={modalStyle}> {clickedDateEvents.map((event)=>{
+      return <div className="modalStylee" > <h1> {event.summary}</h1> </div>
+    })} </div>
       <Stack>
         <Button
           variant="contained"
           className="top-button"
           onClick={() =>
             singleUserEvents.forEach((event) => {
+              console.log("load singke use")
               googleEvents(event.start, event.summary);
             })
           }
         >
           Display fetched events
         </Button>
+       
+        <div>
+    
+    
+    </div>
+     
         <Container>
-          <div className="demo-app-main">
+          <div className="demo-app-main" >
             <FullCalendar
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
               headerToolbar={{
@@ -83,12 +158,7 @@ const handleEventClick = (clickInfo) => {
   }
 };
 
-const handleDateClick = (selectInfo) => {
- 
-  let calendarApi = selectInfo.view.calendar;
-  console.log(selectInfo.dateStr);
-  calendarApi.unselect(); //
-};
+
 
 function renderEventContent(eventInfo) {
   return (
