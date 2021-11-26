@@ -1,14 +1,16 @@
 # FULL STACK APP BUILT WITH MERN
 
-##FUNCTIONALITY
+## FUNCTIONALITY
 
-Fetch events from google calender api and display them on the app , in a event calender.
+##  Fetch events from google calender api and display them on the app , in a event calender.
 
-There are two types of users on this app Normal User and Admin user.
+### There are two types of users on this app Guest User and Admin user.
 
 ############################################
-TO USE THE APP AS ADMIN USER USE THE BELOW CREDENTIALS AND USERNAME AND AND PASSWORD, SO THAT YOU CAN ACCESS
-THE ADMIN PANEL
+ 
+#### TO USE THE APP AS ADMIN USER USE THE BELOW CREDENTIALS AND USERNAME AND AND PASSWORD, SO THAT YOU CAN ACCESS  ### THE ADMIN PANEL
+
+
 #############################################
 ADMIN USERNAME: admin@techvariable.com
 ADMIN PASSWORD :  12345678
