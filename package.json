@@ -1,5 +1,5 @@
 {
-  "name": "Google-events-app",
+  "name": "Googleeventsapp",
   "version": "1.0.0",
   "description": "Get events from google",
   "main": "server.js",

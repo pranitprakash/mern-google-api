@@ -23,6 +23,7 @@ import {
 export const loadEvents = ()=> async (dispatch)=>{
     try {
         const res = await api.get('/events/getMyEvents');
+        console.log(res.data);
 
         dispatch({
             type:GET_EVENTS,

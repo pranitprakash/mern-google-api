@@ -25,7 +25,7 @@ const Token = ({ setAlert, loadEvents, events }) => {
 
         const authToken = localStorage.token;
 
-        await axios.post('/api/events/token', body, {
+        await axios.post('api/events/token', body, {
           headers: {
             'x-auth-token': authToken
           }
@@ -50,7 +50,7 @@ const Token = ({ setAlert, loadEvents, events }) => {
             onClick={() => {
               loadEvents();
 
-              setAlert('Your events are succesfully loaded', 'danger');
+              setAlert('Your events are loading please wait', 'danger');
             }}
           >
             Fetch Events from google
